@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品原型合集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#0FC6C2',
+                        success: '#00B42A',
+                        warning: '#FF7D00',
+                        danger: '#F53F3F',
+                        dark: '#1D2129',
+                        'gray-light': '#F2F3F5',
+                        'gray-medium': '#86909C',
+                        'gray-dark': '#4E5969'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .gradient-bg {
+                background: linear-gradient(135deg, #165DFF 0%, #0FC6C2 100%);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px -10px rgba(22, 93, 255, 0.15);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-dark min-h-screen">
+    <!-- 顶部导航栏 -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo和标题 -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-xl">科</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-primary">产品原型合集</h1>
+                        <p class="text-xs text-gray-medium">Product Prototype Collection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">项目列表</h2>
+                <p class="text-gray-medium">
+                    以下是我们的产品原型项目，点击链接查看详细内容
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 科创大数据平台 -->
+                <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+                    <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-database text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">科创大数据平台</h3>
+                    <p class="text-gray-medium mb-4">
+                        湖北科创大数据平台主站，包含平台能力、解决方案、关于我们等页面
+                    </p>
+                    <a href="project-kcdsj/index.html" class="block px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-center">
+                        查看项目
+                    </a>
+                </div>
+                
+                <!-- 科创大数据平台智能体矩阵 -->
+                <!-- 
+                <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+                    <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-robot text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">智能体矩阵</h3>
+                    <p class="text-gray-medium mb-4">
+                        科创大数据平台智能体矩阵页面，包含AI企业管家、政策智能体等功能
+                    </p>
+                    <a href="科创大数据平台智能体矩阵.html" class="block px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-center">
+                        查看项目
+                    </a>
+                </div>
+                -->
+                
+                <!-- 政策广场 -->
+                 <!-- 
+                <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+                    <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-file-text-o text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">政策广场</h3>
+                    <p class="text-gray-medium mb-4">
+                        政策广场页面，包含政策搜索、筛选、列表展示及分类推荐功能
+                    </p>
+                    <a href="政策广场.html" class="block px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-center">
+                        查看项目
+                    </a>
+                </div>
+                -->
+                <!-- 标准服务产品 -->
+                <!-- 
+                <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+                    <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-shopping-bag text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">标准服务产品</h3>
+                    <p class="text-gray-medium mb-4">
+                        标准服务产品页面，展示企业成长陪跑包、提质计划包等产品信息
+                    </p>
+                    <a href="标准服务产品.html" class="block px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-center">
+                        查看项目
+                    </a>
+                </div>
+                -->
+                <!-- 科创服务商城详情页 -->
+                <!-- 
+                <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+                    <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-shopping-cart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">科创服务商城详情页</h3>
+                    <p class="text-gray-medium mb-4">
+                        科创服务商城详情页，展示服务详情、价格、购买选项及相关推荐
+                    </p>
+                    <a href="科创服务商城详情页.html" class="block px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-center">
+                        查看项目
+                    </a>
+                </div>
+                -->
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部信息 -->
+    <footer class="bg-white border-t border-gray-light mt-12 py-6">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-xs text-gray-medium">
+                    © 2026 产品原型合集 版权所有
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
