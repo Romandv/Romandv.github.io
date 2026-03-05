@@ -157,6 +157,31 @@
         </div>
     </main>
 
+    <!-- 折叠菜单 -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <button id="leisureMenuButton" class="w-full flex items-center justify-between px-4 py-3 bg-gray-light rounded-lg hover:bg-gray-200 transition-colors">
+                    <span class="font-medium">更多功能</span>
+                    <i class="fa fa-chevron-down text-gray-medium transition-transform" id="leisureMenuIcon"></i>
+                </button>
+                <div id="leisureMenuContent" class="hidden mt-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <a href="project-games/whack-a-mole.html" class="block px-4 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-center">
+                            休闲
+                        </a>
+                        <button class="px-4 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                            工具
+                        </button>
+                        <button class="px-4 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                            其他
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 底部信息 -->
     <footer class="bg-white border-t border-gray-light mt-12 py-6">
         <div class="container mx-auto px-4">
@@ -167,5 +192,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 休闲菜单交互
+        document.getElementById('leisureMenuButton').addEventListener('click', function() {
+            const leisureMenuContent = document.getElementById('leisureMenuContent');
+            const leisureMenuIcon = document.getElementById('leisureMenuIcon');
+            
+            leisureMenuContent.classList.toggle('hidden');
+            leisureMenuIcon.classList.toggle('rotate-180');
+        });
+    </script>
 </body>
 </html>
