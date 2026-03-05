@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>打地鼠游戏 - 女生节快乐</title>
+    <title>古拉哈捉迷藏・暴打版 - 女生节快乐</title>
     <style>
         * {
             margin: 0;
@@ -80,7 +80,9 @@
         
         .mole img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
         
         .mole.active {
@@ -188,7 +190,7 @@
 <body>
     <div class="game-container">
         <div class="game-header">
-            <h1>打地鼠游戏</h1>
+            <h1>古拉哈捉迷藏・暴打版</h1>
             <div class="score-timer">
                 <div class="score">分数: <span id="score">0</span></div>
                 <div class="timer">时间: <span id="timer">60</span></div>
@@ -251,7 +253,7 @@
         </div>
         
         <div class="start-screen" id="startScreen">
-            <h1>打地鼠游戏</h1>
+            <h1>古拉哈捉迷藏・暴打版</h1>
             <p>点击或触摸出现的地鼠，在60秒内获得尽可能高的分数！</p>
             <button class="btn" onclick="startGame()">开始游戏</button>
         </div>
