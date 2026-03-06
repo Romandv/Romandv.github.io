@@ -210,6 +210,23 @@
             animation: pulse 1s ease-in-out infinite;
         }
         
+        .message-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            border: 3px solid #ff69b4;
+        }
+        
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -274,7 +291,10 @@
             <div class="overlay hidden" id="gameOverScreen">
                 <h1>游戏结束</h1>
                 <div class="final-score" id="finalScore">0</div>
-                <div class="girls-day-message">安琪酱真棒！！！女生节快乐！！</div>
+                <div class="message-container">
+                    <img src="images/17b1ee34-c081-4b04-8d77-b0f2f4f91910.png" class="avatar" alt="头像">
+                    <div class="girls-day-message">安琪酱真棒！！！女生节快乐！！</div>
+                </div>
                 <button class="btn" onclick="restartGame()">再玩一次</button>
             </div>
         </div>
@@ -301,7 +321,6 @@
         let highScore = localStorage.getItem('snakeHighScore') || 0;
         let gameLoop = null;
         let lastRenderTime = 0;
-        let isFirstGameOver = true; // 是否第一次游戏结束
         
         // 蛇的配置 - 在这里配置蛇头图片
         const snakeConfig = {
@@ -810,13 +829,12 @@
             document.getElementById('finalScore').textContent = score;
             document.getElementById('gameOverScreen').classList.remove('hidden');
             
-            // 显示/隐藏女生节祝福语
-            const messageElement = document.querySelector('.girls-day-message');
-            if (isFirstGameOver) {
-                messageElement.style.display = 'block';
-                isFirstGameOver = false;
+            // 显示/隐藏女生节祝福语和头像（分数达到100分才显示）
+            const messageContainer = document.querySelector('.message-container');
+            if (score >= 100) {
+                messageContainer.style.display = 'flex';
             } else {
-                messageElement.style.display = 'none';
+                messageContainer.style.display = 'none';
             }
         }
         
